@@ -1,0 +1,9 @@
+http://www.exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT__00000-05000.trans.bz2
+http://www.exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT__05000-10000.trans.bz2
+http://www.exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT__10000-15000.trans.bz2
+http://www.exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT__15000-20000.trans.bz2
+http://www.exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT__20000-25000.trans.bz2
+http://www.exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT__25000-30000.trans.bz2
+http://www.exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT__30000-35000.trans.bz2
+http://www.exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT.states.bz2
+http://www.exomol.com/db/VO/51V-16O/VOMYT/51V-16O__VOMYT.pf

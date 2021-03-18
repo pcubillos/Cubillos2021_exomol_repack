@@ -1,0 +1,15 @@
+http://www.exomol.com/db/TiO/46Ti-16O/Toto/46Ti-16O__Toto.states.bz2
+http://www.exomol.com/db/TiO/46Ti-16O/Toto/46Ti-16O__Toto.trans.bz2
+http://www.exomol.com/db/TiO/46Ti-16O/Toto/46Ti-16O__Toto.pf
+http://www.exomol.com/db/TiO/47Ti-16O/Toto/47Ti-16O__Toto.states.bz2
+http://www.exomol.com/db/TiO/47Ti-16O/Toto/47Ti-16O__Toto.trans.bz2
+http://www.exomol.com/db/TiO/47Ti-16O/Toto/47Ti-16O__Toto.pf
+http://www.exomol.com/db/TiO/48Ti-16O/Toto/48Ti-16O__Toto.states.bz2
+http://www.exomol.com/db/TiO/48Ti-16O/Toto/48Ti-16O__Toto.trans.bz2
+http://www.exomol.com/db/TiO/48Ti-16O/Toto/48Ti-16O__Toto.pf
+http://www.exomol.com/db/TiO/49Ti-16O/Toto/49Ti-16O__Toto.states.bz2
+http://www.exomol.com/db/TiO/49Ti-16O/Toto/49Ti-16O__Toto.trans.bz2
+http://www.exomol.com/db/TiO/49Ti-16O/Toto/49Ti-16O__Toto.pf
+http://www.exomol.com/db/TiO/50Ti-16O/Toto/50Ti-16O__Toto.states.bz2
+http://www.exomol.com/db/TiO/50Ti-16O/Toto/50Ti-16O__Toto.trans.bz2
+http://www.exomol.com/db/TiO/50Ti-16O/Toto/50Ti-16O__Toto.pf
