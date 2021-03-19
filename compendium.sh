@@ -7,27 +7,23 @@ pip install lbl-repack==1.4.2
 # Download Exomol data:
 cd $topdir/inputs
 wget -i wget_exomol_H2O_pokazatel.txt
-wget -i wget_exomol_C2H2_acety.txt
-wget -i wget_exomol_CH4_yt10to10.txt
+wget -i wget_exomol_CH4_yt34to10.txt
+wget -i wget_exomol_CO2_ucl4000.txt
 wget -i wget_exomol_NH3_coyute.txt
 wget -i wget_exomol_NH3_byte15.txt
 wget -i wget_exomol_HCN_harris-larner.txt
 wget -i wget_exomol_TiO_toto.txt
 wget -i wget_exomol_VO_vomyt.txt
+wget -i wget_exomol_C2H2_acety.txt
+wget -i wget_exomol_C2H4_mayty.txt
 
 # Partition functions:
-pbay -pf exomol ../inputs/46Ti-16O__Toto.pf \
-                ../inputs/47Ti-16O__Toto.pf \
-                ../inputs/48Ti-16O__Toto.pf \
-                ../inputs/49Ti-16O__Toto.pf \
-                ../inputs/50Ti-16O__Toto.pf
-
-pbay -pf exomol ../inputs/51V-16O__VOMYT.pf
-
-# Exomol PFs for these molecules stop at temps too low (< 3000K),
-# use HITRAN/TIPS PFs instead:
+# Use TIPS partition functions for molecules with Exomol PFs lower
+# than 3000 K:
+cd $topdir/inputs
 pbay -pf tips NH3  as_exomol
 pbay -pf tips C2H4 as_exomol
+pbay -pf tips CH4  as_exomol
 
 
 # Resort MARVELised datasets:
@@ -39,21 +35,33 @@ repack -sort repack_exomol_NH3_coyute.cfg
 cd $topdir/runs
 repack repack_exomol_H2O_pokazatel.cfg
 repack repack_exomol_CO2_ucl4000.cfg
-repack repack_exomol_CH4_yt10to10.cfg
+repack repack_exomol_CH4_yt34to10.cfg
 repack repack_exomol_HCN_harris-larner.cfg
 repack repack_exomol_NH3_coyute-byte.cfg
 repack repack_exomol_TiO_toto.cfg
 repack repack_exomol_VO_vomyt.cfg
 repack repack_exomol_C2H2_acety.cfg
 repack repack_exomol_C2H4_mayty.cfg
-#repack repack_exomol_H2S_ayt2.cfg
 
 
 # ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # Validation:
+
+# Make a generic hot-Jupiter atmospheric profile:
+pbay -c atm_hot_jupiter.cfg
+
+# Format partition functions and line lists for use in pyratbay:
+cd $topdir/validation
+pbay -pf exomol ../inputs/51V-16O__VOMYT.pf
+pbay -pf exomol ../inputs/1H2-16O__POKAZATEL.pf
+
+cd $topdir/validation
 pbay -c tli_repacked_VO.cfg
 pbay -c tli_repacked_H2O.cfg
 pbay -c tli_exomol_H2O.cfg
 
+# VO opacity spectrum:
+python ../code/fig_VO_opacity.py
 
+python code/fig_H2O_spectra.py
 

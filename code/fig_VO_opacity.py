@@ -5,13 +5,11 @@ import pyratbay as pb
 import pyratbay.tools as pt
 
 
-with pt.cd('validation/'):
-    pyrat = pb.run('spectrum_VO_repack.cfg', init=True)
+pyrat = pb.run('spectrum_VO_repack.cfg', init=True)
 wl = 1e4/pyrat.spec.wn
-# Eval at 2200 K:
+# Eval at 2200 K and pressure where VO HWHM is ~1 cm-1:
 pyrat.atm.temp[:] = 2200.0
 pyrat.run(temp=pyrat.atm.temp)
-# Indices where VO HWHM is ~1 cm-1:
 vo_index = list(pyrat.mol.name).index('VO')
 ilayer = 35
 ec, _ = pyrat.get_ec(ilayer)
@@ -21,7 +19,7 @@ repack_opacity = ec[0] / number_density
 
 # McKemmish data:
 mckemmish_wl, mckemmish_opacity = np.loadtxt(
-    'inputs/mckemmish_exomol_vo.dat', unpack=True)
+    '../inputs/mckemmish_exomol_vo.dat', unpack=True)
 
 fs = 12
 xrans = [
@@ -56,6 +54,6 @@ for i in range(3):
     ax.tick_params(
         labelsize=fs-1, direction='in', which='both',
         bottom=True, top=True, left=True, right=True)
-plt.savefig('plots/VO_opacity_spectrum.pdf')
-plt.savefig('plots/VO_opacity_spectrum.png')
+plt.savefig('../plots/VO_opacity_spectrum.pdf')
+plt.savefig('../plots/VO_opacity_spectrum.png')
 
