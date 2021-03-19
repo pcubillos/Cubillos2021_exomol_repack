@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 import pyratbay as pb
-import pyratbay.tools as pt
 
 
 pyrat = pb.run('spectrum_VO_repack.cfg', init=True)

@@ -45,23 +45,27 @@ repack repack_exomol_C2H4_mayty.cfg
 
 
 # ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-# Validation:
+# Benchmark:
 
 # Make a generic hot-Jupiter atmospheric profile:
+cd $topdir/benchmark
 pbay -c atm_hot_jupiter.cfg
 
 # Format partition functions and line lists for use in pyratbay:
-cd $topdir/validation
+cd $topdir/benchmark
 pbay -pf exomol ../inputs/51V-16O__VOMYT.pf
 pbay -pf exomol ../inputs/1H2-16O__POKAZATEL.pf
 
-cd $topdir/validation
+cd $topdir/benchmark
 pbay -c tli_repacked_VO.cfg
 pbay -c tli_repacked_H2O.cfg
 pbay -c tli_exomol_H2O.cfg
 
-# VO opacity spectrum:
+# VO opacity spectrum benchmark:
+cd $topdir/benchmark
 python ../code/fig_VO_opacity.py
 
-python code/fig_H2O_spectra.py
+# H2O transmission spectrum benchmark:
+cd $topdir/benchmark
+python ../code/fig_H2O_spectra.py
 
