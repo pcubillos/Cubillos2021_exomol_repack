@@ -61,7 +61,7 @@ for i in range(ntemp):
     if i == 0:
         ax1.legend(loc='lower right', fontsize=fs-1)
     if i == 1:
-        ax1.set_ylabel(r'Extinction coefficient (cm$^{-1}$)', fontsize=fs)
+        ax1.set_ylabel(r'H$_2$O extinction coefficient (cm$^{-1}$)',fontsize=fs)
         ax2.set_ylabel(r'Dex residuals (%)', fontsize=fs)
 ax1.set_xlabel('Wavelength (um)', fontsize=fs)
 ax2.set_xlabel('Wavelength (um)', fontsize=fs)
@@ -93,6 +93,7 @@ ax.set_xticks(xticks)
 ax.set_xlim(xlim)
 ax.tick_params(labelsize=fs-1, direction='in', which='both', right=True)
 ax.set_ylabel(r'$(R_{\rm p}/R_{\rm s})^{2}$ (%)', fontsize=fs)
+ax.set_xlabel('Wavelength (um)', fontsize=fs)
 ax.legend(loc='upper left', fontsize=fs)
 # Residuals:
 ax = plt.subplot(212)
