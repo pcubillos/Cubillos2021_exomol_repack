@@ -34,7 +34,7 @@ xlim = (1.25, 1.4)
 xticks = np.arange(1.24, 1.41, 0.02)
 xticks = np.arange(1.25, 1.41, 0.03)
 
-plt.figure(0, (8, 5.8))
+plt.figure(0, (8.5, 5.8))
 plt.clf()
 plt.subplots_adjust(0.08, 0.07, 0.98, 0.97, hspace=0.2, wspace=0.22)
 for i in range(ntemp):

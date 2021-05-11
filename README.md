@@ -4,7 +4,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3768504.svg)](https://doi.org/10.5281/zenodo.3768504)
 
-This paper was submitted to The Astrophysical Journal Supplement Series.  To download the compendium to your local machine, execute the following command:
+This paper was submitted to the AAS journals.  To download the compendium to your local machine, execute the following command:
 ```shell
 git clone https://github.com/pcubillos/Cubillos2021_exomol_repack
 ```

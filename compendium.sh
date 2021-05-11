@@ -6,7 +6,8 @@ topdir=`pwd`
 pip install 'pyratbay==1.0.0'
 pip install 'lbl-repack==1.4.3'
 
-# Download Exomol data:
+# Download Exomol data (note that this will download a ridiculous amount
+# of data, you have been warned):
 cd $topdir/inputs
 wget -i wget_exomol_H2O_pokazatel.txt
 wget -i wget_exomol_CH4_yt34to10.txt
