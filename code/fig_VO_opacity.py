@@ -4,7 +4,7 @@ import numpy as np
 import pyratbay as pb
 
 
-pyrat = pb.run('spectrum_VO_repack.cfg', init=True)
+pyrat = pb.run('spectrum_VO_repack.cfg', run_step='init')
 wl = 1e4/pyrat.spec.wn
 # Eval at 2200 K and pressure where VO HWHM is ~1 cm-1:
 pyrat.atm.temp[:] = 2200.0
@@ -47,7 +47,7 @@ for i in range(3):
     plt.xlim(xrans[i])
     plt.ylim(yrans[i])
     plt.xlabel('Wavelength (um)', fontsize=fs)
-    plt.ylabel(r'Opacity (cm$^2$ molecule$^{-1}$)', fontsize=fs)
+    plt.ylabel(r'Cross section (cm$^2$ molec$^{-1}$)', fontsize=fs)
     if i == 0:
         plt.legend(loc='best', fontsize=fs)
     ax.tick_params(
