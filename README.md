@@ -1,6 +1,6 @@
 # Reproducible Research Compendium for:
   
-## Cubillos (2021): "Repacked ExoMol Line Lists"
+## Cubillos (2021): "Repacked ExoMol Opacity Line Lists"
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3768504.svg)](https://doi.org/10.5281/zenodo.3768504)
 
