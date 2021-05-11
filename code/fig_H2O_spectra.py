@@ -6,8 +6,8 @@ import pyratbay as pb
 import pyratbay.constants as pc
 
 
-repack = pb.run('spectrum_H2O_repack.cfg', init=True, no_logfile=True)
-exomol = pb.run('spectrum_H2O_exomol.cfg', init=True, no_logfile=True)
+repack = pb.run('spectrum_H2O_repack.cfg', run_step='init', no_logfile=True)
+exomol = pb.run('spectrum_H2O_exomol.cfg', run_step='init', no_logfile=True)
 wl = 1.0 / (repack.spec.wn*pc.um)
 nwave = repack.spec.nwave
 
